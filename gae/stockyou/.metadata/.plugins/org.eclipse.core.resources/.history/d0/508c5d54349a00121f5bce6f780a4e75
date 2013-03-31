@@ -1,0 +1,7 @@
+div.container {
+	width: 100%;
+}
+
+div li{
+	list-style:none;
+}

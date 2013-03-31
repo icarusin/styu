@@ -1,0 +1,32 @@
+{
+    "portfolio": [
+        {
+            "moving_daily_average": "121.5",
+            "stock_code": "AAPL",
+            "stock_price": "118",
+            "unit": "$",
+            "updated_dt": "<Unix Time Here>",
+            "logo": "apple.jpg"
+        },
+        {
+            "moving_daily_average": "125",
+            "stock_code": "IBM",
+            "stock_price": "28",
+            "unit": "$",
+            "updated_dt": "<Unix Time Here>",
+            "logo": "index.jpg"
+        },
+        {
+            "moving_daily_average": "120",
+            "stock_code": "ATT",
+            "stock_price": "130",
+            "unit": "$",
+            "updated_dt": "<Unix Time Here>",
+            "logo": "att.jpg"
+        }
+    ],
+    "user": {
+        "id": "1234",
+        "name": "Arun"
+    }
+}

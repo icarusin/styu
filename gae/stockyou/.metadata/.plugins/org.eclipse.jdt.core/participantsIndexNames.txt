@@ -1,0 +1,3 @@
+INDEX VERSION 1.126
+C:\programming\projects\stockyou\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4195216614.index
+\StockService\src

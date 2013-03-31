@@ -1,0 +1,12 @@
+div.container {
+	width: 100%;
+}
+
+div.portfolio{
+	overflow:hidden;
+	text-align:center;
+}
+
+div.stock{
+	overflow:hidden;
+}

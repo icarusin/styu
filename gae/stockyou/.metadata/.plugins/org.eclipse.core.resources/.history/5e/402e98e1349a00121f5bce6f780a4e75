@@ -1,0 +1,19 @@
+div.container {
+	width: 100%;
+}
+
+div.portfolio{
+	overflow:hidden;
+}
+
+div.stock{
+	overflow:hidden;
+	text-align:center;
+	margin-left:200px;
+}
+
+div.stock-img{
+	overflow:hidden;
+	text-align:center;
+	margin-left:200px;
+}

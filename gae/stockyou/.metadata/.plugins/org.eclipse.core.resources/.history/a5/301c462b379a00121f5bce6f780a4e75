@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html  lang="en" ng-app>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/Core.css">
+  <script type="text/javascript" src="/js/angular.js"></script>
+  <script type="text/javascript" src="/js/homecontroller.js"></script>
+   <title>NSE-Index</title>
+<title>Insert title here</title>
+</head>
+<body ng-controller="StockListCtrl">
+   <div class="container">
+	<div class="portfolio">
+          <div ng-repeat="stock in stocks">
+            <div class="stock">
+             	<div style="float:left;" class="stock-prop">
+            		<a href="#" class="thumb"><img class="stock-img" ng-src="{{stock.logo}}"></a>
+            	</div>
+            	<div class="stock-code stock-prop" style="float:left;"><div>{{stock.stock_code}}</div></div>
+            	<div class="stock-price stock-prop" style="float:left;"><div>{{stock.stock_price}}</div></div> 
+            	<div class="stock-fda stock-prop" style="float:left;"><div>{{stock.fifty_day_average}}</div></div>
+            	<div class="stock-2da stock-prop" style="float:left;"><div>{{stock.two_hundred_day_average}}</div></div>
+            	<div class="stock-unit stock-prop" style="float:left;"><div>{{stock.unit}}</div></div>
+            </div>
+            <div>&nbsp;</div>
+          </div>
+        </div>
+    </div>
+</body>
+</html>

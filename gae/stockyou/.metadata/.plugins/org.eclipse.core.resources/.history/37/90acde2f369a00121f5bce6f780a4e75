@@ -1,0 +1,37 @@
+* {
+padding: 0;
+margin: 0;
+list-style: none;
+border: 0;
+font-family: "Tahoma", sans-serif,Arial;
+}
+
+div.container {
+	width: 100%;
+}
+
+div.portfolio{
+	overflow:hidden;
+}
+
+div.stock{
+	overflow:hidden;
+	text-align:center;
+	margin-left:200px;
+}
+
+img.stock-img{
+	width:30px;
+	height:30px;
+}
+
+div.stock-prop{
+	font-size:14px;
+	margin-left:10px;
+	margin-right:10px;
+	margin-top:5px;
+	margin-bottom:5px;
+	width:30px;
+	height:30px;
+	text-align:center;
+}
