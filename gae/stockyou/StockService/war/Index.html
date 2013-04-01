@@ -6,10 +6,14 @@
   <link rel="stylesheet" type="text/css" href="css/Core.css">
   <script type="text/javascript" src="/js/angular.js"></script>
   <script type="text/javascript" src="/js/homecontroller.js"></script>
-   <title>NSE-Index</title>
-<title>Insert title here</title>
+   <title>StokRoids - NSE Nifty</title>
 </head>
 <body ng-controller="StockListCtrl">
+ 	<div class="header">
+ 		<div style="float:left;margin-left:100px"><a href="http://stokroids.appspot.com"><img class="logo" src="images/styu_logo.png"/></a></div>
+ 		<div style="float:right;margin-right:60px;"><a>Login</a></div>
+ 	
+ 	</div>
    <div class="container">
 	<div class="portfolio">
           <div>
@@ -19,10 +23,12 @@
             	</div>
             	<div class="stock-name stock-prop" style="float:left;"><div class="stock-label">Company</div></div>
             	<div class="stock-code stock-prop" style="float:left;"><div class="stock-label">Stock Code</div></div>
-            	<div class="stock-price stock-prop" style="float:left;"><div class="stock-label">Last Price</div></div> 
+            	<div class="stock-price stock-prop" style="float:left;"><div class="stock-label">Last Price</div></div>
+            	<div class="stock-value-change stock-prop" style="float:left;"><div class="stock-label">Day Value Change</div></div>
+            	<div class="stock-percentage-change stock-prop" style="float:left;"><div class="stock-label">Day % Change</div></div>
+            	<div class="stock-updated-dt stock-prop" style="float:left;"><div class="stock-label">Updated On</div></div> 
             	<div class="stock-fda stock-prop" style="float:left;"><div class="stock-label">50 Day Average</div></div>
             	<div class="stock-2da stock-prop" style="float:left;"><div class="stock-label">200 Day Average</div></div>
-            	<div class="stock-unit stock-prop" style="float:left;"><div class="stock-label">Currency</div></div>
             </div>
           </div>
           <div ng-repeat="stock in stocks">
@@ -32,13 +38,23 @@
             	</div>
             	<div class="stock-name stock-prop" style="float:left;"><div class="stock-label">{{stock.name}}</div></div>
             	<div class="stock-code stock-prop" style="float:left;"><div class="stock-label">{{stock.stock_code}}</div></div>
-            	<div class="stock-price stock-prop" style="float:left;"><div class="stock-label">{{stock.stock_price}}</div></div> 
+            	<div class="stock-price stock-prop" style="float:left;"><div class="stock-label">{{stock.stock_price}}</div></div>
+            	<div class="stock-value-change stock-prop" style="float:left;"><div class="stock-label">{{stock.day_value_change}}</div></div>
+            	<div class="stock-percentage-change stock-prop" style="float:left;"><div class="stock-label">{{stock.day_percentage_change}}</div></div>
+            	<div class="stock-updated-dt stock-prop" style="float:left;"><div class="stock-label">{{stock.updated_dt}}</div></div> 
             	<div class="stock-fda stock-prop" style="float:left;"><div class="stock-label">{{stock.fifty_day_average}}</div></div>
             	<div class="stock-2da stock-prop" style="float:left;"><div class="stock-label">{{stock.two_hundred_day_average}}</div></div>
-            	<div class="stock-unit stock-prop" style="float:left;"><div class="stock-label">{{stock.unit}}</div></div>
             </div>
           </div>
         </div>
     </div>
+    <div class="footer">
+ 		<div  style="float:left;margin-left:600px"><a href="#">About Us</a></div>
+ 		<div  style="float:left;margin-left:20px"><a href="#">Contact Us</a></div>
+ 		<div  style="float:left;margin-left:20px"><a href="#">Why StokRoids</a></div>
+ 		<div style="margin-top:10px">&nbsp;</div>
+ 		<div  style="margin-left:650px">© 2013 Blanket Inc.</div>
+ 	</div>
+ 	
 </body>
 </html>

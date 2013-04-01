@@ -16,13 +16,15 @@ public class QuotesConverter {
 			List<Quote> quotes = new ArrayList<Quote>();
 			for (YahooQuote yQuote : yPortfolio.getQuery().getResults().getQuote()) {
 				Quote quote = new Quote();
-				quote.setFiftyDayAverage(yQuote.getFiftydayMovingAverage());
-				quote.setTwoHundredDayAverage(yQuote.getTwoHundreddayMovingAverage());
-				quote.setStockCode(yQuote.getSymbol());
-				quote.setStockPrice(yQuote.getLastTradePriceOnly());
 				quote.setUnit("Rs");
+				quote.setFiftyDayAverage(quote.getUnit() + " "+yQuote.getFiftydayMovingAverage());
+				quote.setTwoHundredDayAverage(quote.getUnit() + " "+yQuote.getTwoHundreddayMovingAverage());
+				quote.setStockCode(yQuote.getSymbol());
+				quote.setStockPrice(quote.getUnit() + " "+yQuote.getLastTradePriceOnly());
 				quote.setName(yQuote.getName());
-				quote.setUpdatedDt(yQuote.getLastTradeDate());
+				quote.setUpdatedDt(yQuote.getLastTradeDate() + " - " + yQuote.getLastTradeTime());
+				quote.setDayValueChange(quote.getUnit() + " "+yQuote.getDaysValueChange());
+				quote.setDayPercentageChange(yQuote.getPercentChange());
 				quote.setLogo(getImageFile(yQuote));
 				quotes.add(quote);
 			}

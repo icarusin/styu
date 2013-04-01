@@ -7,9 +7,43 @@ font-family: "Tahoma", sans-serif,Arial;
 color: #000;
 }
 
+.logo{
+	width:170px;
+	height:30px;
+}
+
+div.header{
+	margin-top:10px;
+	overflow:hidden;
+	color: #808080;
+	margin-bottom: 10px;
+}
+
+div.header a{
+	color: #808080;
+}
+
+div.footer{
+	border-top:2px solid;
+	padding-top:10px;
+	overflow:hidden;
+	color: #808080
+}
+
+div.footer a{
+	color: #808080;
+	font-size:12px;
+}
+
+div.footer div{
+	color: #808080;
+	font-size:12px;
+}
+
 div.container {
 	width: 100%;
 }
+
 
 div.portfolio{
 	overflow:hidden;
@@ -18,11 +52,15 @@ div.portfolio{
 div.stock{
 	overflow:hidden;
 	text-align:center;
-	margin-left:300px;
+	margin-left:150px;
 	border-top: 2px solid;
 	border-right: 2px solid;
 	border-left: 2px solid;
-	width: 900px;
+	width: 1250px;
+}
+
+div.stock-last{
+	border-bottom : 2px solid;
 }
 
 div.stock a{
@@ -35,7 +73,7 @@ img.stock-img{
 }
 
 div.stock-prop{
-	font-size:14px;
+	font-size:12px;
 	margin-left:10px;
 	margin-right:10px;
 	margin-top:5px;
@@ -61,4 +99,18 @@ div.stock-label{
 div.stock-name{
 	width:160px;
 	height:30px;
+}
+
+div.stock-value-change{
+	width:160px;
+	height:30px;
+}
+
+div.stock-percentage-change{
+	width:100px;
+	height:30px;
+}
+
+div.stock-updated-dt{
+	width:140px;
 }

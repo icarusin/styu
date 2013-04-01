@@ -3,14 +3,16 @@ package com.stockyou.data;
 public class Quote {
 	
 
-	private String FiftyDayAverage;
-	private String TwoHundredDayAverage;
+	private String fiftyDayAverage;
+	private String twoHundredDayAverage;
 	private String stockCode;
 	private String stockPrice;
 	private String unit;
 	private String updatedDt;
 	private String logo;
 	private String name;
+	private String dayValueChange;
+	private String dayPercentageChange;
 	
 	public String getStockCode() {
 		return stockCode;
@@ -43,21 +45,33 @@ public class Quote {
 		this.logo = logo;
 	}
 	public String getFiftyDayAverage() {
-		return FiftyDayAverage;
+		return fiftyDayAverage;
 	}
 	public void setFiftyDayAverage(String fiftyDayAverage) {
-		FiftyDayAverage = fiftyDayAverage;
+		this.fiftyDayAverage = fiftyDayAverage;
 	}
 	public String getTwoHundredDayAverage() {
-		return TwoHundredDayAverage;
+		return twoHundredDayAverage;
 	}
 	public void setTwoHundredDayAverage(String twoHundredDayAverage) {
-		TwoHundredDayAverage = twoHundredDayAverage;
+		this.twoHundredDayAverage = twoHundredDayAverage;
 	}
 	public String getName() {
 		return name;
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	public String getDayValueChange() {
+		return dayValueChange;
+	}
+	public void setDayValueChange(String dayValueChange) {
+		this.dayValueChange = dayValueChange;
+	}
+	public String getDayPercentageChange() {
+		return dayPercentageChange;
+	}
+	public void setDayPercentageChange(String dayPercentageChange) {
+		this.dayPercentageChange = dayPercentageChange;
 	}
 }
