@@ -1,6 +1,5 @@
 package com.stockyou.data.yahoo;
 
-import java.util.Date;
 
 public class YahooQuote {
 
@@ -23,6 +22,8 @@ public class YahooQuote {
 	private String LastTradePriceOnly;
 	private String FiftydayMovingAverage;
 	private String TwoHundreddayMovingAverage;
+	private String LastTradeTime;
+	private String PercentChange;
 
 	public String getAsk() {
 		return Ask;
@@ -177,4 +178,19 @@ public class YahooQuote {
 		TwoHundreddayMovingAverage = twoHundreddayMovingAverage;
 	}
 
+	public String getLastTradeTime() {
+		return LastTradeTime;
+	}
+
+	public void setLastTradeTime(String lastTradeTime) {
+		LastTradeTime = lastTradeTime;
+	}
+
+	public String getPercentChange() {
+		return PercentChange;
+	}
+
+	public void setPercentChange(String percentChange) {
+		PercentChange = percentChange;
+	}
 }
