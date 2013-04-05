@@ -2,7 +2,7 @@
 
 /* Controllers */
 
-function StockListCtrl($scope,stocks) {
+function StockListCtrl($scope,$timeout,stocks) {
   
   $scope.setSmiley = function (stock,index){
   	console.log(stock.stock_price);
@@ -21,8 +21,10 @@ function StockListCtrl($scope,stocks) {
   $scope.smileys = ['/images/happy.jpeg','/images/cry.jpeg'];
   
   $scope.getAllStocks = function(){
-	var promise  = stocks.getstocks();  
-	promise.then(onSuccess,onError);
+	console.log("Making a call to the backend to get stocks");
+	//TODO uncomment this after fixing NPE
+	//var promise  = stocks.getstocks();  
+	//promise.then(onSuccess,onError);
 	 
 	  
   };
@@ -52,6 +54,17 @@ function StockListCtrl($scope,stocks) {
 	  alert("Something went wrong");
   }
 
- $scope.getAllStocks();
+ 
+ 
+ this.startPolling = function(){
+   function poll(){
+     // do something.
+	 $scope.getAllStocks();
+     $timeout(poll, 60000); //make a call every 60 secs
+   };
+   poll();
+ };
+ this.startPolling();
+
 }
-StockListCtrl.$inject = ['$scope','stocks'];
+StockListCtrl.$inject = ['$scope','$timeout','stocks'];
