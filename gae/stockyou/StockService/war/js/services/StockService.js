@@ -1,5 +1,5 @@
-var app = angular.module('styuApp', []);
-app.factory('stocks',['$http', '$q',function($http,$q){
+
+ myModule.factory('stocks',['$http', '$q',function($http,$q){
 	'use strict';
 	return {
 		getstocks : function(){

@@ -2,7 +2,7 @@
 
 /* Controllers */
 
-function StockListCtrl($scope, $http,stocks) {
+function StockListCtrl($scope,stocks) {
   
   $scope.setSmiley = function (stock,index){
   	console.log(stock.stock_price);
@@ -22,18 +22,21 @@ function StockListCtrl($scope, $http,stocks) {
   
   $scope.getAllStocks = function(){
 	var promise  = stocks.getstocks();  
-	promise(onSuccess,onError);
+	promise.then(onSuccess,onError);
+	 
+	  
   };
   var onSuccess = function(result){
-	  $scope.stocks = result;
+	  $scope.stocks = result.quote;
 	  var length = $scope.stocks.length;
 	  for (var i=0;i<length;i++)
 		{ 
 			  /*setsmiley($scope.stocks[i],i);*/
+		      
 			  var stock = $scope.stocks[i];
 			  stock.moving_daily_average = 50;
-			   console.log(stock.stock_price - stock.moving_daily_average);
-	  		if(((stock.stock_price - stock.moving_daily_average)/stock.moving_daily_average)> 0.0){
+			   console.log(parseFloat(stock.stock_price) - stock.moving_daily_average);
+	  		if(((parseFloat(stock.stock_price) - stock.moving_daily_average)/stock.moving_daily_average)> 0.0){
 	          console.log("good" + i);
 	          $scope.stocks[i].hash = $scope.smileys[0];
 	          /*$scope.hash = $scope.smileys[0];*/
@@ -49,5 +52,6 @@ function StockListCtrl($scope, $http,stocks) {
 	  alert("Something went wrong");
   }
 
-
+ $scope.getAllStocks();
 }
+StockListCtrl.$inject = ['$scope','stocks'];
