@@ -12,7 +12,7 @@ public class QuotesConverter {
 		
 		Portfolio portfolio = new Portfolio();
 		
-		if(yPortfolio != null &&  yPortfolio.getQuery().getResults() != null  &&  yPortfolio.getQuery().getResults().getQuote() != null){
+		if(yPortfolio != null   &&  yPortfolio.getQuery().getResults().getQuote() != null){
 			List<Quote> quotes = new ArrayList<Quote>();
 			for (YahooQuote yQuote : yPortfolio.getQuery().getResults().getQuote()) {
 				Quote quote = new Quote();

@@ -23,8 +23,8 @@ function StockListCtrl($scope,$timeout,stocks) {
   $scope.getAllStocks = function(){
 	console.log("Making a call to the backend to get stocks");
 	//TODO uncomment this after fixing NPE
-	//var promise  = stocks.getstocks();  
-	//promise.then(onSuccess,onError);
+	var promise  = stocks.getstocks();  
+	promise.then(onSuccess,onError);
 	 
 	  
   };
