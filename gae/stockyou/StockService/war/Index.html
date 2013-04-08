@@ -21,12 +21,15 @@
         <div class="navbar-inner">
  	      <div class="brand"><a href="http://stokroids.appspot.com"><img src="images/styu_logo.png"></a></div>
  		     <div><a>Login</a></div>
+         Refresh quotes every <select style="font-size:16px" ng-model="refreshRate" ng-options="obj.id as obj.name for obj in refreshRates">    
+                   </select>
  	      </div>
  	    </div>
 
    
 	 <div class="portfolio">
           <div>
+
             <div class="stock row-fluid">
              	
             	<div class="stock-label span1">Logo</div>
@@ -38,8 +41,13 @@
             	<div class="stock-updated-dt stock-prop span1" ><div class="stock-label">Updated On</div></div> 
             	<div class="stock-fda stock-prop span1"><div class="stock-label">50 Day Average</div></div>
             	<div class="stock-2da stock-prop span1"><div class="stock-label">200 Day Average</div></div>
-            </div>
           </div>
+          	
+          		
+          			
+          		
+          	
+            
           <div ng-repeat="stock in stocks">
             <div class="stock row-fluid">
              	<div class="stock-prop span1">

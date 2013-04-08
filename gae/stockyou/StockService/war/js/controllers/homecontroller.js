@@ -20,6 +20,16 @@ function StockListCtrl($scope,$timeout,stocks) {
   }
   $scope.smileys = ['/images/happy.jpeg','/images/cry.jpeg'];
   
+  $scope.refreshRates = [
+                      {id : 10, name : '10 seconds'}, 
+                      {id : 30, name : '30 seconds'}, 
+                      {id : 60, name : '1 minute'},       
+                      {id : 300, name : '5 minutes'},
+                      {id : 600, name : '10 minutes'},
+  					  {id : 900, name : '15 minutes'} ];
+  
+  $scope.refreshRate = 60;
+  
   $scope.getAllStocks = function(){
 	console.log("Making a call to the backend to get stocks");
 	//TODO uncomment this after fixing NPE
@@ -39,12 +49,12 @@ function StockListCtrl($scope,$timeout,stocks) {
 			  stock.moving_daily_average = 50;
 			   console.log(parseFloat(stock.stock_price) - stock.moving_daily_average);
 	  		if(((parseFloat(stock.stock_price) - stock.moving_daily_average)/stock.moving_daily_average)> 0.0){
-	          console.log("good" + i);
+	          //console.log("good" + i);
 	          $scope.stocks[i].hash = $scope.smileys[0];
 	          /*$scope.hash = $scope.smileys[0];*/
 	  		}
 	  		else{
-	  		console.log("bad"+i);
+	  		//console.log("bad"+i);
 	  		  $scope.stocks[i].hash = $scope.smileys[1];
 	  		}
 		}
@@ -60,7 +70,12 @@ function StockListCtrl($scope,$timeout,stocks) {
    function poll(){
      // do something.
 	 $scope.getAllStocks();
+<<<<<<< HEAD
      $timeout(poll, 6000000); //make a call every 60 secs
+=======
+	 console.log("Call will be made every "+$scope.refreshRate+" seconds");
+     $timeout(poll, $scope.refreshRate * 1000); //make a call every 60 secs
+>>>>>>> f05be80ba346685baa065159402e52d7a7baedce
    };
    poll();
  };
