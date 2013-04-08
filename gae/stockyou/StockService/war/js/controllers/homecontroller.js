@@ -23,8 +23,8 @@ function StockListCtrl($scope,$timeout,stocks) {
   $scope.getAllStocks = function(){
 	console.log("Making a call to the backend to get stocks");
 	//TODO uncomment this after fixing NPE
-	var promise  = stocks.getstocks();  
-	promise.then(onSuccess,onError);
+	//var promise  = stocks.getstocks();  
+	//promise.then(onSuccess,onError);
 	 
 	  
   };
@@ -60,7 +60,7 @@ function StockListCtrl($scope,$timeout,stocks) {
    function poll(){
      // do something.
 	 $scope.getAllStocks();
-     $timeout(poll, 60000); //make a call every 60 secs
+     $timeout(poll, 6000000); //make a call every 60 secs
    };
    poll();
  };

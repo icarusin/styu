@@ -3,7 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="css/Core.css">
+  
+  <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+  <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
   <script type="text/javascript" src="js/styuapp.js"></script>
   <script type="text/javascript" src="/js/services/StockService.js"></script>
@@ -12,47 +14,48 @@
 
    <title>StokRoids - NSE Nifty</title>
 </head>
-<body ng-controller="StockListCtrl">
-    <script type="text/javascript" src="/js/controllers/homecontroller.js"></script>
- 	<div class="header">
- 		<div style="float:left;margin-left:100px"><a href="http://stokroids.appspot.com"><img class="logo" src="images/styu_logo.png"/></a></div>
- 		<div style="float:right;margin-right:60px;"><a>Login</a></div>
- 	
- 	</div>
+<body>
+    <div ng-controller="StockListCtrl" class="container">
+      <script type="text/javascript" src="/js/controllers/homecontroller.js"></script>
+ 	    <div class="navbar">
+        <div class="navbar-inner">
+ 	      <div class="brand"><a href="http://stokroids.appspot.com"><img src="images/styu_logo.png"></a></div>
+ 		     <div><a>Login</a></div>
+ 	      </div>
+ 	    </div>
 
-   <div class="container">
-	<div class="portfolio">
+   
+	 <div class="portfolio">
           <div>
-            <div class="stock">
-             	<div style="float:left;" class="stock-prop">
-            		<div class="stock-label">Logo</div>
-            	</div>
-            	<div class="stock-name stock-prop" style="float:left;"><div class="stock-label">Company</div></div>
-            	<div class="stock-code stock-prop" style="float:left;"><div class="stock-label">Stock Code</div></div>
-            	<div class="stock-price stock-prop" style="float:left;"><div class="stock-label">Last Price</div></div>
-            	<div class="stock-value-change stock-prop" style="float:left;"><div class="stock-label">Day Value Change</div></div>
-            	<div class="stock-percentage-change stock-prop" style="float:left;"><div class="stock-label">Day % Change</div></div>
-            	<div class="stock-updated-dt stock-prop" style="float:left;"><div class="stock-label">Updated On</div></div> 
-            	<div class="stock-fda stock-prop" style="float:left;"><div class="stock-label">50 Day Average</div></div>
-            	<div class="stock-2da stock-prop" style="float:left;"><div class="stock-label">200 Day Average</div></div>
+            <div class="stock row-fluid">
+             	
+            	<div class="stock-label span1">Logo</div>
+            	<div class="stock-name stock-prop span1 stock-label">Company</div>
+            	<div class="stock-code stock-prop span1"><div class="stock-label">Stock Code</div></div>
+            	<div class="stock-price stock-prop span1" ><div class="stock-label">Last Price</div></div>
+            	<div class="stock-value-change stock-prop span1"><div class="stock-label">Day Value Change</div></div>
+            	<div class="stock-percentage-change stock-prop span1" ><div class="stock-label">Day % Change</div></div>
+            	<div class="stock-updated-dt stock-prop span1" ><div class="stock-label">Updated On</div></div> 
+            	<div class="stock-fda stock-prop span1"><div class="stock-label">50 Day Average</div></div>
+            	<div class="stock-2da stock-prop span1"><div class="stock-label">200 Day Average</div></div>
             </div>
           </div>
           <div ng-repeat="stock in stocks">
-            <div class="stock">
-             	<div style="float:left;" class="stock-prop">
+            <div class="stock row-fluid">
+             	<div class="stock-prop span1">
             		<a href="#" class="thumb"><img class="stock-img" ng-src="{{stock.logo}}"></a>
             	</div>
-            	<div class="stock-name stock-prop" style="float:left;"><div class="stock-label">{{stock.name}}</div></div>
-            	<div class="stock-code stock-prop" style="float:left;"><div class="stock-label">{{stock.stock_code}}</div></div>
-            	<div class="stock-price stock-prop" style="float:left;"><div class="stock-label">{{stock.stock_price}}</div></div>
-            	<div class="stock-value-change stock-prop" style="float:left;"><div class="stock-label">{{stock.day_value_change}}</div></div>
-            	<div class="stock-percentage-change stock-prop" style="float:left;"><div class="stock-label">{{stock.day_percentage_change}}</div></div>
-            	<div class="stock-updated-dt stock-prop" style="float:left;"><div class="stock-label">{{stock.updated_dt}}</div></div> 
-            	<div class="stock-fda stock-prop" style="float:left;"><div class="stock-label">{{stock.fifty_day_average}}</div></div>
-            	<div class="stock-2da stock-prop" style="float:left;"><div class="stock-label">{{stock.two_hundred_day_average}}</div></div>
+            	<div class="stock-name stock-prop span1"><div class="stock-label">{{stock.name}}</div></div>
+            	<div class="stock-code stock-prop span1" <div class="stock-label">{{stock.stock_code}}</div></div>
+            	<div class="stock-price stock-prop span1"><div class="stock-label">{{stock.stock_price}}</div></div>
+            	<div class="stock-value-change stock-prop span1"><div class="stock-label">{{stock.day_value_change}}</div></div>
+            	<div class="stock-percentage-change stock-prop span1"><div class="stock-label">{{stock.day_percentage_change}}</div></div>
+            	<div class="stock-updated-dt stock-prop span1"><div class="stock-label">{{stock.updated_dt}}</div></div> 
+            	<div class="stock-fda stock-prop span1"><div class="stock-label">{{stock.fifty_day_average}}</div></div>
+            	<div class="stock-2da stock-prop span1"><div class="stock-label">{{stock.two_hundred_day_average}}</div></div>
             </div>
-          </div>
-        </div>
+    </div>
+    
     </div>
 
     <div class="footer">
@@ -63,6 +66,6 @@
  		<div  style="margin-left:650px">© 2013 Blanket Inc.</div>
  	</div>
  	
-
+  </div>
 </body>
 </html>
