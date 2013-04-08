@@ -21,6 +21,8 @@ function StockListCtrl($scope,$timeout,stocks) {
   $scope.smileys = ['/images/happy.jpeg','/images/cry.jpeg'];
   
   $scope.refreshRates = [
+                      {id : 10, name : '10 seconds'}, 
+                      {id : 30, name : '30 seconds'}, 
                       {id : 60, name : '1 minute'},       
                       {id : 300, name : '5 minutes'},
                       {id : 600, name : '10 minutes'},
