@@ -6,4 +6,6 @@ import com.stockyou.data.Trend;
 public interface QuoteTrendStrategy {
 
 	public Trend getTrend(Quote quote);
+	
+	public void updateQuote(Quote quote);
 }

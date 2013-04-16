@@ -74,4 +74,17 @@ public class Quote {
 	public void setDayPercentageChange(String dayPercentageChange) {
 		this.dayPercentageChange = dayPercentageChange;
 	}
+	
+	@Override
+	public boolean equals(Object o){
+	 if(!(o instanceof Quote))
+		 return false;
+	 Quote that = (Quote)o;
+	 return that.stockCode == this.stockCode;
+	}
+	
+	@Override
+	public int hashCode(){
+		return this.stockCode.hashCode();
+	}
 }
